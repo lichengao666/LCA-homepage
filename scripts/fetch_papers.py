@@ -163,6 +163,8 @@ def main():
   papers = collect_papers(config, api_key)
   output = {
     "generated_at": datetime.now(timezone.utc).isoformat(),
+    "status": "ok",
+    "message": "Paper radar data generated successfully.",
     "source": "Google Scholar via SerpApi",
     "window_years": config["window_years"],
     "keywords": [

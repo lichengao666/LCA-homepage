@@ -139,7 +139,11 @@ function renderPaperData(data) {
   if (!papers.length) {
     const empty = document.createElement("article");
     empty.className = "paper-empty";
-    empty.innerHTML = "<h3>暂无匹配论文</h3><p>自动任务运行后，如果近 3 年内匹配到白名单 Transactions 论文，会显示在这里。</p>";
+    const title = data.generated_at ? "暂无匹配论文" : "等待自动任务生成数据";
+    const message = data.generated_at
+      ? "自动任务已运行，但暂未匹配到近 3 年内的白名单 Transactions 论文。"
+      : "请先在 GitHub Actions Secrets 中配置 SERPAPI_KEY，然后手动运行 Update paper radar 工作流。";
+    empty.innerHTML = `<h3>${title}</h3><p>${message}</p>`;
     paperList.append(empty);
     return;
   }

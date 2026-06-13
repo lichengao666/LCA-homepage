@@ -1,5 +1,7 @@
 {
   "generated_at": "2026-06-13T15:21:20.512010+00:00",
+  "status": "ok",
+  "message": "Paper radar data generated successfully.",
   "source": "Google Scholar via SerpApi",
   "window_years": 3,
   "keywords": [

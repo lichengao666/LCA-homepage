@@ -50,6 +50,8 @@ Google Scholar 自动抓取需要在 GitHub 仓库中配置 `SERPAPI_KEY`：
 3. 新建仓库密钥 `SERPAPI_KEY`，值填写你的 SerpApi API Key。
 4. 打开 `Actions`，手动运行一次 `Update paper radar`。
 
+推送脚本、配置或工作流文件后，`Update paper radar` 也会自动运行一次，方便立即测试。
+
 如果 GitHub Actions 无法自动提交更新，请在仓库中打开 `Settings` -> `Actions` -> `General`，把 `Workflow permissions` 改为 `Read and write permissions`。
 
 ## 发布到 GitHub Pages

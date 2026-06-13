@@ -1,6 +1,12 @@
 name: Update paper radar
 
 on:
+  push:
+    paths:
+      - "scripts/fetch_papers.py"
+      - "scripts/paper_config.json"
+      - "data/papers.json"
+      - ".github/workflows/update-papers.yml"
   schedule:
     - cron: "0 20 * * *"
   workflow_dispatch:
