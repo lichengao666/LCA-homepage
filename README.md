@@ -25,6 +25,33 @@
 
 如果访问者所在网络无法加载 Google Translate，页面仍会正常显示中文原文。
 
+## 论文雷达
+
+主页包含一个“论文雷达”模块，会读取 `data/papers.json` 并展示 Google Scholar 近 3 年与 `ISAC`、`UAV`、`MA` 相关的 Transactions 期刊论文。
+
+关键词含义：
+
+- `ISAC`：Integrated Sensing and Communication，通感一体化。
+- `UAV`：Unmanned Aerial Vehicle，无人机。
+- `MA`：Movable Antenna，可移动天线。
+
+自动更新逻辑位于：
+
+- `.github/workflows/update-papers.yml`：每天北京时间约 04:00 自动运行，也可以在 GitHub Actions 手动运行。
+- `scripts/fetch_papers.py`：通过 SerpApi 的 Google Scholar 接口抓取论文数据。
+- `scripts/paper_config.json`：配置关键词、关键词别名、Transactions 期刊白名单和 Q1/Q2 标注。
+
+由于 JCR/CAS 分区完整数据通常不是开放 API，本项目采用本地白名单控制“二区及以上”条件。后续如果要增加或删除 Transactions 期刊，修改 `scripts/paper_config.json` 即可。
+
+Google Scholar 自动抓取需要在 GitHub 仓库中配置 `SERPAPI_KEY`：
+
+1. 注册并获取 SerpApi API Key。
+2. 打开 GitHub 仓库 `Settings` -> `Secrets and variables` -> `Actions`。
+3. 新建仓库密钥 `SERPAPI_KEY`，值填写你的 SerpApi API Key。
+4. 打开 `Actions`，手动运行一次 `Update paper radar`。
+
+如果 GitHub Actions 无法自动提交更新，请在仓库中打开 `Settings` -> `Actions` -> `General`，把 `Workflow permissions` 改为 `Read and write permissions`。
+
 ## 发布到 GitHub Pages
 
 方式一：发布为个人主页，访问地址通常是：

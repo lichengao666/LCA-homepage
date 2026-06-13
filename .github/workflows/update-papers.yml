@@ -1,0 +1,32 @@
+name: Update paper radar
+
+on:
+  schedule:
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-papers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch recent papers
+        run: python scripts/fetch_papers.py
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+
+      - name: Commit updated paper data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update paper radar data"
+          file_pattern: data/papers.json

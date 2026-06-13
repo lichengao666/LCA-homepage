@@ -35,6 +35,7 @@
           <a href="#about">关于我</a>
           <a href="#experience">个人经历</a>
           <a href="#research">研究方向</a>
+          <a href="#paper-radar">论文雷达</a>
           <a href="#projects">项目成果</a>
           <a href="#contact">联系方式</a>
         </div>
@@ -152,9 +153,38 @@
         </div>
       </section>
 
-      <section class="section" id="projects">
+      <section class="section paper-radar" id="paper-radar">
         <div class="section-heading">
           <span>04</span>
+          <h2>论文雷达</h2>
+        </div>
+        <div class="paper-dashboard">
+          <div class="paper-dashboard-main">
+            <p>
+              自动追踪 Google Scholar 近 3 年与 ISAC、UAV、MA 相关的 Transactions 期刊论文，期刊白名单限定为 Q1/Q2。
+            </p>
+            <p class="paper-meta" id="paper-meta">正在读取最新论文数据...</p>
+          </div>
+          <div class="paper-filters" aria-label="论文筛选条件">
+            <span>ISAC · 通感一体化</span>
+            <span>UAV · 无人机</span>
+            <span>MA · 可移动天线</span>
+            <span>Transactions</span>
+            <span>Q1/Q2</span>
+            <span>近 3 年</span>
+          </div>
+        </div>
+        <div class="paper-list" id="paper-list" aria-live="polite">
+          <article class="paper-empty">
+            <h3>等待数据生成</h3>
+            <p>GitHub Actions 首次运行后，这里会展示自动抓取到的论文。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <span>05</span>
           <h2>项目与成果</h2>
         </div>
         <div class="project-list">
