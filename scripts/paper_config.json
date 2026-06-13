@@ -1,8 +1,11 @@
 {
-  "source": "google_scholar_serpapi",
+  "source": "google_scholar",
+  "access_method": "serpapi_google_scholar_api",
+  "quartile_system": "SCI/JCR",
+  "allowed_quartiles": ["Q1", "Q2", "Q3"],
   "window_years": 3,
   "max_results_per_query": 20,
-  "keywords": [
+  "concepts": [
     {
       "label": "ISAC",
       "meaning": "Integrated Sensing and Communication",
@@ -33,6 +36,20 @@
         "movable antenna system",
         "movable antenna systems"
       ]
+    }
+  ],
+  "query_groups": [
+    {
+      "label": "UAV AND ISAC",
+      "concepts": ["UAV", "ISAC"]
+    },
+    {
+      "label": "MA AND ISAC",
+      "concepts": ["MA", "ISAC"]
+    },
+    {
+      "label": "MA AND UAV",
+      "concepts": ["MA", "UAV"]
     }
   ],
   "journals": [

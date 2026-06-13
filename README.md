@@ -27,7 +27,7 @@
 
 ## 论文雷达
 
-主页包含一个“论文雷达”模块，会读取 `data/papers.json` 并展示 Google Scholar 近 3 年与 `ISAC`、`UAV`、`MA` 相关的 Transactions 期刊论文。
+主页包含一个“论文雷达”模块，会读取 `data/papers.json` 并展示 Google Scholar 近 3 年同时满足成对关键词关系的 Transactions 期刊论文。论文资源库来源为 Google Scholar。
 
 关键词含义：
 
@@ -35,15 +35,21 @@
 - `UAV`：Unmanned Aerial Vehicle，无人机。
 - `MA`：Movable Antenna，可移动天线。
 
+检索关系为“且”的关系，而不是“或”的关系：
+
+- `UAV AND ISAC`
+- `MA AND ISAC`
+- `MA AND UAV`
+
 自动更新逻辑位于：
 
 - `.github/workflows/update-papers.yml`：每天北京时间约 04:00 自动运行，也可以在 GitHub Actions 手动运行。
-- `scripts/fetch_papers.py`：通过 SerpApi 的 Google Scholar 接口抓取论文数据。
-- `scripts/paper_config.json`：配置关键词、关键词别名、Transactions 期刊白名单和 Q1/Q2 标注。
+- `scripts/fetch_papers.py`：从 Google Scholar 获取论文数据；自动任务通过 SerpApi Google Scholar API 作为访问方式。
+- `scripts/paper_config.json`：配置概念关键词、成对检索关系、Transactions 期刊白名单和 SCI/JCR Q1-Q3 标注。
 
-由于 JCR/CAS 分区完整数据通常不是开放 API，本项目采用本地白名单控制“二区及以上”条件。后续如果要增加或删除 Transactions 期刊，修改 `scripts/paper_config.json` 即可。
+由于 SCI/JCR 分区完整数据通常不是开放 API，本项目采用本地白名单控制“三区及以上”条件，即 `Q1`、`Q2`、`Q3`。后续如果要增加或删除 Transactions 期刊，修改 `scripts/paper_config.json` 即可。
 
-Google Scholar 自动抓取需要在 GitHub 仓库中配置 `SERPAPI_KEY`：
+Google Scholar 自动抓取需要在 GitHub 仓库中配置 `SERPAPI_KEY`。这里的 SerpApi 只是访问 Google Scholar 的接口服务，论文资源库仍然来源于 Google Scholar：
 
 1. 注册并获取 SerpApi API Key。
 2. 打开 GitHub 仓库 `Settings` -> `Secrets and variables` -> `Actions`。

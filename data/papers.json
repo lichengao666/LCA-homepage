@@ -2,7 +2,8 @@
   "generated_at": "2026-06-13T15:44:28.277812+00:00",
   "status": "ok",
   "message": "Paper radar data generated successfully.",
-  "source": "Google Scholar via SerpApi",
+  "source": "Google Scholar",
+  "access_method": "SerpApi Google Scholar API",
   "window_years": 3,
   "keywords": [
     {
@@ -18,7 +19,23 @@
       "meaning": "Movable Antenna"
     }
   ],
-  "journal_filter": "Transactions journals curated as Q1/Q2 in scripts/paper_config.json",
+  "query_groups": [
+    {
+      "label": "UAV AND ISAC",
+      "concepts": ["UAV", "ISAC"]
+    },
+    {
+      "label": "MA AND ISAC",
+      "concepts": ["MA", "ISAC"]
+    },
+    {
+      "label": "MA AND UAV",
+      "concepts": ["MA", "UAV"]
+    }
+  ],
+  "quartile_system": "SCI/JCR",
+  "allowed_quartiles": ["Q1", "Q2", "Q3"],
+  "journal_filter": "Transactions journals curated as SCI/JCR Q1/Q2/Q3 in scripts/paper_config.json",
   "papers": [
     {
       "title": "Building Resilient ISAC in Maritime IoT: Dynamic Attack Detection and Energy-Efficient Scheduling Under DoS Jamming",

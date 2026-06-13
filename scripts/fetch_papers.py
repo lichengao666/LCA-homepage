@@ -26,9 +26,17 @@ def quote_query_term(term):
   return f'"{term}"' if re.search(r"\s|-", term) else term
 
 
-def build_keyword_query(keyword, journal_name):
-  terms = " OR ".join(quote_query_term(term) for term in keyword["terms"])
-  return f"({terms}) source:{quote_query_term(journal_name)}"
+def build_concept_query(concept):
+  terms = " OR ".join(quote_query_term(term) for term in concept["terms"])
+  return f"({terms})"
+
+
+def build_group_query(group, concepts_by_label, journal_name):
+  concept_queries = [
+    build_concept_query(concepts_by_label[label])
+    for label in group["concepts"]
+  ]
+  return f"{' '.join(concept_queries)} source:{quote_query_term(journal_name)}"
 
 
 def scholar_request(api_key, params):
@@ -68,13 +76,25 @@ def author_names(result, limit=6):
   return [compact_text(head)] if head else []
 
 
-def title_or_snippet_matches(result, keyword_terms):
+def result_text(result):
   text = normalize_text(" ".join([
     result.get("title", ""),
     result.get("snippet", ""),
     result.get("publication_info", {}).get("summary", "")
   ]))
-  return any(normalize_text(term) in text for term in keyword_terms)
+  return text
+
+
+def text_matches_concept(text, concept):
+  return any(normalize_text(term) in text for term in concept["terms"])
+
+
+def result_matches_group(result, group, concepts_by_label):
+  text = result_text(result)
+  return all(
+    text_matches_concept(text, concepts_by_label[label])
+    for label in group["concepts"]
+  )
 
 
 def result_matches_journal(result, journal_name):
@@ -82,7 +102,7 @@ def result_matches_journal(result, journal_name):
   return normalize_text(journal_name) in summary
 
 
-def make_paper(result, journal, keyword_label):
+def make_paper(result, journal, group):
   year = extract_year(result)
   result_id = result.get("result_id", "")
 
@@ -97,7 +117,8 @@ def make_paper(result, journal, keyword_label):
     "google_scholar_id": result_id,
     "cited_by": result.get("inline_links", {}).get("cited_by", {}).get("total"),
     "doi": "",
-    "keywords": [keyword_label]
+    "keywords": [group["label"]],
+    "concepts": group["concepts"]
   }
 
 
@@ -105,11 +126,21 @@ def collect_papers(config, api_key):
   today = date.today()
   from_year = today.year - int(config["window_years"]) + 1
   to_year = today.year
+  allowed_quartiles = set(config.get("allowed_quartiles", ["Q1", "Q2", "Q3"]))
+  journals = [
+    journal
+    for journal in config["journals"]
+    if journal.get("quartile") in allowed_quartiles
+  ]
+  concepts_by_label = {
+    concept["label"]: concept
+    for concept in config["concepts"]
+  }
   papers_by_key = {}
 
-  for keyword in config["keywords"]:
-    for journal in config["journals"]:
-      scholar_query = build_keyword_query(keyword, journal["name"])
+  for group in config["query_groups"]:
+    for journal in journals:
+      scholar_query = build_group_query(group, concepts_by_label, journal["name"])
       params = {
         "q": scholar_query,
         "as_ylo": from_year,
@@ -120,24 +151,25 @@ def collect_papers(config, api_key):
       try:
         data = scholar_request(api_key, params)
       except Exception as exc:
-        print(f"Google Scholar request failed: {keyword['label']} / {journal['name']} / {exc}")
+        print(f"Google Scholar request failed: {group['label']} / {journal['name']} / {exc}")
         continue
 
       for result in data.get("organic_results", []):
         if not result.get("title"):
           continue
 
-        if not title_or_snippet_matches(result, keyword["terms"]):
+        if not result_matches_group(result, group, concepts_by_label):
           continue
 
         if not result_matches_journal(result, journal["name"]):
           continue
 
         key = normalize_text(result.get("result_id") or result.get("link") or result.get("title"))
-        paper = papers_by_key.get(key) or make_paper(result, journal, keyword["label"])
+        paper = papers_by_key.get(key) or make_paper(result, journal, group)
         keywords = set(paper["keywords"])
-        keywords.add(keyword["label"])
+        keywords.add(group["label"])
         paper["keywords"] = sorted(keywords)
+        paper["concepts"] = sorted(set(paper.get("concepts", []) + group["concepts"]))
         papers_by_key[key] = paper
 
       time.sleep(0.25)
@@ -165,16 +197,26 @@ def main():
     "generated_at": datetime.now(timezone.utc).isoformat(),
     "status": "ok",
     "message": "Paper radar data generated successfully.",
-    "source": "Google Scholar via SerpApi",
+    "source": "Google Scholar",
+    "access_method": "SerpApi Google Scholar API",
     "window_years": config["window_years"],
     "keywords": [
       {
-        "label": keyword["label"],
-        "meaning": keyword["meaning"]
+        "label": concept["label"],
+        "meaning": concept["meaning"]
       }
-      for keyword in config["keywords"]
+      for concept in config["concepts"]
     ],
-    "journal_filter": "Transactions journals curated as Q1/Q2 in scripts/paper_config.json",
+    "query_groups": [
+      {
+        "label": group["label"],
+        "concepts": group["concepts"]
+      }
+      for group in config["query_groups"]
+    ],
+    "quartile_system": config.get("quartile_system", "SCI/JCR"),
+    "allowed_quartiles": config.get("allowed_quartiles", ["Q1", "Q2", "Q3"]),
+    "journal_filter": "Transactions journals curated as SCI/JCR Q1/Q2/Q3 in scripts/paper_config.json",
     "papers": papers
   }
 

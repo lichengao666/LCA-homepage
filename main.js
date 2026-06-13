@@ -133,7 +133,7 @@ function renderPaperData(data) {
   const papers = data.papers || [];
   const generatedDate = data.generated_at ? formatDate(data.generated_at) : "尚未生成";
 
-  paperMeta.textContent = `数据源：${data.source || "Crossref"} · 更新时间：${generatedDate} · 共 ${papers.length} 篇`;
+  paperMeta.textContent = `资源库：${data.source || "Google Scholar"} · 更新时间：${generatedDate} · 共 ${papers.length} 篇`;
   paperList.replaceChildren();
 
   if (!papers.length) {
@@ -141,7 +141,7 @@ function renderPaperData(data) {
     empty.className = "paper-empty";
     const title = data.generated_at ? "暂无匹配论文" : "等待自动任务生成数据";
     const message = data.generated_at
-      ? "自动任务已运行，但暂未匹配到近 3 年内的白名单 Transactions 论文。"
+      ? "自动任务已运行，但暂未匹配到近 3 年内同时满足成对关键词关系的 SCI/JCR Q1-Q3 白名单 Transactions 论文。"
       : "请先在 GitHub Actions Secrets 中配置 SERPAPI_KEY，然后手动运行 Update paper radar 工作流。";
     empty.innerHTML = `<h3>${title}</h3><p>${message}</p>`;
     paperList.append(empty);
