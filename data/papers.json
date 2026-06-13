@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T15:21:20.512010+00:00",
+  "generated_at": "2026-06-13T15:44:28.277812+00:00",
   "status": "ok",
   "message": "Paper radar data generated successfully.",
   "source": "Google Scholar via SerpApi",
@@ -19,5 +19,322 @@
     }
   ],
   "journal_filter": "Transactions journals curated as Q1/Q2 in scripts/paper_config.json",
-  "papers": []
+  "papers": [
+    {
+      "title": "Building Resilient ISAC in Maritime IoT: Dynamic Attack Detection and Energy-Efficient Scheduling Under DoS Jamming",
+      "authors": [
+        "Y Li",
+        "S Li",
+        "X Guan"
+      ],
+      "journal": "IEEE Transactions on Industrial Informatics",
+      "quartile": "Q1",
+      "published": "2026-01-01",
+      "year": "2026",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11432951/",
+      "google_scholar_id": "jlPCEN7ulhsJ",
+      "cited_by": null,
+      "doi": "",
+      "keywords": [
+        "ISAC"
+      ]
+    },
+    {
+      "title": "Topology Construction Algorithms for Communication and Localization Services in Multi-UAVs IIoT Networks",
+      "authors": [
+        "C Li",
+        "KW Chin"
+      ],
+      "journal": "IEEE Transactions on Industrial Informatics",
+      "quartile": "Q1",
+      "published": "2026-01-01",
+      "year": "2026",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11436085/",
+      "google_scholar_id": "c_qpp7xoSK0J",
+      "cited_by": null,
+      "doi": "",
+      "keywords": [
+        "UAV"
+      ]
+    },
+    {
+      "title": "Achieving Resilient and Self-Adaptive Topology Configuration in 3D UAV Networks",
+      "authors": [
+        "J Huang",
+        "M Chen",
+        "Y Liu"
+      ],
+      "journal": "ACM Transactions on Internet Technology",
+      "quartile": "Q2",
+      "published": "2026-01-01",
+      "year": "2026",
+      "url": "https://dl.acm.org/doi/abs/10.1145/3747350",
+      "google_scholar_id": "W8NNpkWzFnYJ",
+      "cited_by": 1,
+      "doi": "",
+      "keywords": [
+        "UAV"
+      ]
+    },
+    {
+      "title": "Integrated sensing and communication with reconfigurable holographic surface",
+      "authors": [
+        "P Zhu",
+        "W Ni",
+        "X Wang"
+      ],
+      "journal": "IEEE Transactions on Communications",
+      "quartile": "Q1",
+      "published": "2025-01-01",
+      "year": "2025",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11025997/",
+      "google_scholar_id": "14RiNdaasTIJ",
+      "cited_by": 10,
+      "doi": "",
+      "keywords": [
+        "ISAC"
+      ]
+    },
+    {
+      "title": "How does CP length affect the sensing range for OFDM-ISAC?",
+      "authors": [
+        "X Xu",
+        "Z Zhou",
+        "Y Zeng"
+      ],
+      "journal": "IEEE Transactions on Signal Processing",
+      "quartile": "Q1",
+      "published": "2025-01-01",
+      "year": "2025",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11277313/",
+      "google_scholar_id": "4eyKrort9XkJ",
+      "cited_by": 9,
+      "doi": "",
+      "keywords": [
+        "ISAC"
+      ]
+    },
+    {
+      "title": "Task-Oriented Integrated Sensing and Semantic Communications for Multi-Device Video Analytics",
+      "authors": [
+        "Y He",
+        "X Li",
+        "J Luo"
+      ],
+      "journal": "IEEE Transactions on Mobile Computing",
+      "quartile": "Q1",
+      "published": "2025-01-01",
+      "year": "2025",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11288062/",
+      "google_scholar_id": "ULZFSoMs5xgJ",
+      "cited_by": 6,
+      "doi": "",
+      "keywords": [
+        "ISAC"
+      ]
+    },
+    {
+      "title": "UAV data acquisition and processing assisted by UGV-enabled mobile edge computing",
+      "authors": [
+        "J Tang",
+        "Y Zeng"
+      ],
+      "journal": "IEEE Transactions on Industrial Informatics",
+      "quartile": "Q1",
+      "published": "2025-01-01",
+      "year": "2025",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10878364/",
+      "google_scholar_id": "0pCOIKPD_YYJ",
+      "cited_by": 23,
+      "doi": "",
+      "keywords": [
+        "ISAC",
+        "UAV"
+      ]
+    },
+    {
+      "title": "RIS alignment via virtual partitioning for resilient uplink multi-RIS-assisted UAV communications",
+      "authors": [
+        "M Saif",
+        "S Valaee"
+      ],
+      "journal": "IEEE Transactions on Communications",
+      "quartile": "Q1",
+      "published": "2025-01-01",
+      "year": "2025",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10854532/",
+      "google_scholar_id": "WN8K_hWIU-EJ",
+      "cited_by": 20,
+      "doi": "",
+      "keywords": [
+        "UAV"
+      ]
+    },
+    {
+      "title": "Joint offloading decision, user association, and resource allocation in hierarchical aerial computing: Collaboration of UAVs and HAP",
+      "authors": [
+        "A Nabi",
+        "S Moh"
+      ],
+      "journal": "IEEE Transactions on Mobile Computing",
+      "quartile": "Q1",
+      "published": "2025-01-01",
+      "year": "2025",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10914555/",
+      "google_scholar_id": "Se7bVzrncbEJ",
+      "cited_by": 29,
+      "doi": "",
+      "keywords": [
+        "UAV"
+      ]
+    },
+    {
+      "title": "A hybrid approach for localisation of sensor nodes in remote locations",
+      "authors": [
+        "RPS Hada",
+        "A Srivastava"
+      ],
+      "journal": "ACM Transactions on Sensor Networks",
+      "quartile": "Q2",
+      "published": "2025-01-01",
+      "year": "2025",
+      "url": "https://dl.acm.org/doi/abs/10.1145/3715914",
+      "google_scholar_id": "JgqzejZFlGEJ",
+      "cited_by": 2,
+      "doi": "",
+      "keywords": [
+        "UAV"
+      ]
+    },
+    {
+      "title": "Joint beamforming and scheduling for integrated sensing and communication systems in URLLC: A POMDP approach",
+      "authors": [
+        "X Zhao",
+        "YJA Zhang"
+      ],
+      "journal": "IEEE Transactions on Communications",
+      "quartile": "Q1",
+      "published": "2024-01-01",
+      "year": "2024",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10521742/",
+      "google_scholar_id": "B0jLc-XMLM8J",
+      "cited_by": 18,
+      "doi": "",
+      "keywords": [
+        "ISAC"
+      ]
+    },
+    {
+      "title": "Large timescale optimization for communications over aerial ad hoc networks with predetermined trajectories",
+      "authors": [
+        "B Li",
+        "J Chen"
+      ],
+      "journal": "IEEE Transactions on Communications",
+      "quartile": "Q1",
+      "published": "2024-01-01",
+      "year": "2024",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10509564/",
+      "google_scholar_id": "ayLpd4RwyWoJ",
+      "cited_by": 11,
+      "doi": "",
+      "keywords": [
+        "UAV"
+      ]
+    },
+    {
+      "title": "Ergodic throughput maximization for RIS-equipped-UAV-enabled wireless powered communications with outdated CSI",
+      "authors": [
+        "S Lin",
+        "Y Zou",
+        "DWK Ng"
+      ],
+      "journal": "IEEE Transactions on Communications",
+      "quartile": "Q1",
+      "published": "2024-01-01",
+      "year": "2024",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10414117/",
+      "google_scholar_id": "i1xXw3JI0CEJ",
+      "cited_by": 42,
+      "doi": "",
+      "keywords": [
+        "UAV"
+      ]
+    },
+    {
+      "title": "Service experience oriented cooperative computing in cache-enabled UAVs assisted MEC networks",
+      "authors": [
+        "X Gao",
+        "L Zhai"
+      ],
+      "journal": "IEEE Transactions on Mobile Computing",
+      "quartile": "Q1",
+      "published": "2024-01-01",
+      "year": "2024",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10439631/",
+      "google_scholar_id": "g3QcTKw6SaIJ",
+      "cited_by": 54,
+      "doi": "",
+      "keywords": [
+        "UAV"
+      ]
+    },
+    {
+      "title": "HCCNet: Hybrid coupled cooperative network for robust indoor localization",
+      "authors": [
+        "L Zhang",
+        "X Zhou",
+        "D Li",
+        "Z Yang"
+      ],
+      "journal": "ACM Transactions on Sensor Networks",
+      "quartile": "Q2",
+      "published": "2024-01-01",
+      "year": "2024",
+      "url": "https://dl.acm.org/doi/abs/10.1145/3665645",
+      "google_scholar_id": "hweGV961jD8J",
+      "cited_by": 7,
+      "doi": "",
+      "keywords": [
+        "UAV"
+      ]
+    },
+    {
+      "title": "Malicious participants and fake task detection incorporating gaussian bias",
+      "authors": [
+        "J Wang",
+        "D Zhao",
+        "G Zhao"
+      ],
+      "journal": "ACM Transactions on Internet Technology",
+      "quartile": "Q2",
+      "published": "2024-01-01",
+      "year": "2024",
+      "url": "https://dl.acm.org/doi/abs/10.1145/3696419",
+      "google_scholar_id": "4L2jUOKxdiUJ",
+      "cited_by": 10,
+      "doi": "",
+      "keywords": [
+        "UAV"
+      ]
+    },
+    {
+      "title": "Local load migration in high-capacity fog computing",
+      "authors": [
+        "M Jasim",
+        "N Siasi"
+      ],
+      "journal": "ACM Transactions on Internet Technology",
+      "quartile": "Q2",
+      "published": "2024-01-01",
+      "year": "2024",
+      "url": "https://dl.acm.org/doi/abs/10.1145/3690386",
+      "google_scholar_id": "OxOw2uskSU0J",
+      "cited_by": 4,
+      "doi": "",
+      "keywords": [
+        "UAV"
+      ]
+    }
+  ]
 }
