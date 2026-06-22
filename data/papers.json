@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T21:16:05.273867+00:00",
+  "generated_at": "2026-06-22T22:03:53.751433+00:00",
   "status": "ok",
   "message": "Paper radar data generated successfully.",
   "source": "Google Scholar",
@@ -114,6 +114,36 @@
       ]
     },
     {
+      "title": "Predictive position control for movable antenna arrays in UAV communications: A spatio-temporal transformer-LSTM framework",
+      "authors": [
+        "K Yu",
+        "K Li",
+        "X Liu",
+        "Q Zhang",
+        "Z Feng"
+      ],
+      "journal": "arXiv",
+      "quartile": "Preprint",
+      "sci_quartile": "Preprint",
+      "cas_zone": null,
+      "cas_note": null,
+      "rank_note": "Preprint",
+      "venue_type": "preprint",
+      "published": "2025-01-01",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2508.10720",
+      "google_scholar_id": "F_z_zH_GW6YJ",
+      "cited_by": 6,
+      "doi": "",
+      "keywords": [
+        "MA AND UAV"
+      ],
+      "concepts": [
+        "MA",
+        "UAV"
+      ]
+    },
+    {
       "title": "Optimizing 6G integrated sensing and communications (ISAC) via expert networks",
       "authors": [
         "J Wang",
@@ -194,6 +224,37 @@
       "url": "https://arxiv.org/abs/2407.04404",
       "google_scholar_id": "livi7_ZNjSAJ",
       "cited_by": 22,
+      "doi": "",
+      "keywords": [
+        "MA AND ISAC"
+      ],
+      "concepts": [
+        "ISAC",
+        "MA"
+      ]
+    },
+    {
+      "title": "Joint antenna position and beamforming optimization with self-interference mitigation in MA-ISAC system",
+      "authors": [
+        "S Peng",
+        "C Zhang",
+        "Y Xu",
+        "Q Wu",
+        "L Zhu",
+        "X Ou"
+      ],
+      "journal": "arXiv",
+      "quartile": "Preprint",
+      "sci_quartile": "Preprint",
+      "cas_zone": null,
+      "cas_note": null,
+      "rank_note": "Preprint",
+      "venue_type": "preprint",
+      "published": "2024-01-01",
+      "year": "2024",
+      "url": "https://arxiv.org/abs/2408.00413",
+      "google_scholar_id": "1PLstUczeAgJ",
+      "cited_by": 15,
       "doi": "",
       "keywords": [
         "MA AND ISAC"
