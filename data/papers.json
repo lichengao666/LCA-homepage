@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T21:44:15.126961+00:00",
+  "generated_at": "2026-06-24T21:24:27.604421+00:00",
   "status": "ok",
   "message": "Paper radar data generated successfully.",
   "source": "Google Scholar",
@@ -110,36 +110,6 @@
       ],
       "concepts": [
         "ISAC",
-        "UAV"
-      ]
-    },
-    {
-      "title": "Predictive position control for movable antenna arrays in UAV communications: A spatio-temporal transformer-LSTM framework",
-      "authors": [
-        "K Yu",
-        "K Li",
-        "X Liu",
-        "Q Zhang",
-        "Z Feng"
-      ],
-      "journal": "arXiv",
-      "quartile": "Preprint",
-      "sci_quartile": "Preprint",
-      "cas_zone": null,
-      "cas_note": null,
-      "rank_note": "Preprint",
-      "venue_type": "preprint",
-      "published": "2025-01-01",
-      "year": "2025",
-      "url": "https://arxiv.org/abs/2508.10720",
-      "google_scholar_id": "F_z_zH_GW6YJ",
-      "cited_by": 6,
-      "doi": "",
-      "keywords": [
-        "MA AND UAV"
-      ],
-      "concepts": [
-        "MA",
         "UAV"
       ]
     },
@@ -262,35 +232,6 @@
       "concepts": [
         "ISAC",
         "MA"
-      ]
-    },
-    {
-      "title": "UAV-mounted movable antenna: Joint optimization of UAV placement and antenna configuration",
-      "authors": [
-        "XW Tang",
-        "Y Shi",
-        "Y Huang",
-        "Q Wu"
-      ],
-      "journal": "arXiv",
-      "quartile": "Preprint",
-      "sci_quartile": "Preprint",
-      "cas_zone": null,
-      "cas_note": null,
-      "rank_note": "Preprint",
-      "venue_type": "preprint",
-      "published": "2024-01-01",
-      "year": "2024",
-      "url": "https://arxiv.org/abs/2409.02469",
-      "google_scholar_id": "JKtrWEtmfCIJ",
-      "cited_by": 20,
-      "doi": "",
-      "keywords": [
-        "MA AND UAV"
-      ],
-      "concepts": [
-        "MA",
-        "UAV"
       ]
     }
   ]
