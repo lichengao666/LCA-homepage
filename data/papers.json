@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T21:24:27.604421+00:00",
+  "generated_at": "2026-06-25T21:45:09.984739+00:00",
   "status": "ok",
   "message": "Paper radar data generated successfully.",
   "source": "Google Scholar",
@@ -85,12 +85,14 @@
   "journal_filter": "Curated venues include SCI/JCR Q1/Q2/Q3 journals, CAS 1/2/3-zone journals, and arXiv preprints in scripts/paper_config.json",
   "papers": [
     {
-      "title": "Advancements in UAV-based integrated sensing and communication: A comprehensive survey",
+      "title": "MIMO OFDM-Enabled ISAC for Low-Altitude Non-Cooperative UAV Surveillance: A Survey",
       "authors": [
-        "M Ahmed",
-        "AA Nasir",
-        "M Masood",
-        "KA Memon"
+        "S Bai",
+        "S Li",
+        "C Yin",
+        "W Qu",
+        "LT Hsu",
+        "Y Liu"
       ],
       "journal": "arXiv",
       "quartile": "Preprint",
@@ -99,11 +101,11 @@
       "cas_note": null,
       "rank_note": "Preprint",
       "venue_type": "preprint",
-      "published": "2025-01-01",
-      "year": "2025",
-      "url": "https://arxiv.org/abs/2501.06526",
-      "google_scholar_id": "4N3-uZngThkJ",
-      "cited_by": 26,
+      "published": "2026-01-01",
+      "year": "2026",
+      "url": "https://arxiv.org/abs/2604.02680",
+      "google_scholar_id": "3iY1wszjHE8J",
+      "cited_by": 1,
       "doi": "",
       "keywords": [
         "UAV AND ISAC"
@@ -141,66 +143,6 @@
       ],
       "concepts": [
         "ISAC"
-      ]
-    },
-    {
-      "title": "Uav-visloc: A large-scale dataset for uav visual localization",
-      "authors": [
-        "W Xu",
-        "Y Yao",
-        "J Cao",
-        "Z Wei",
-        "C Liu",
-        "J Wang"
-      ],
-      "journal": "arXiv",
-      "quartile": "Preprint",
-      "sci_quartile": "Preprint",
-      "cas_zone": null,
-      "cas_note": null,
-      "rank_note": "Preprint",
-      "venue_type": "preprint",
-      "published": "2024-01-01",
-      "year": "2024",
-      "url": "https://arxiv.org/abs/2405.11936",
-      "google_scholar_id": "5pXt1pDMLw4J",
-      "cited_by": 78,
-      "doi": "",
-      "keywords": [
-        "UAV"
-      ],
-      "concepts": [
-        "UAV"
-      ]
-    },
-    {
-      "title": "Fixed and movable antenna technology for 6G integrated sensing and communication",
-      "authors": [
-        "Y Zeng",
-        "Z Dong",
-        "H Wang",
-        "L Zhu",
-        "Z Hong"
-      ],
-      "journal": "arXiv",
-      "quartile": "Preprint",
-      "sci_quartile": "Preprint",
-      "cas_zone": null,
-      "cas_note": null,
-      "rank_note": "Preprint",
-      "venue_type": "preprint",
-      "published": "2024-01-01",
-      "year": "2024",
-      "url": "https://arxiv.org/abs/2407.04404",
-      "google_scholar_id": "livi7_ZNjSAJ",
-      "cited_by": 22,
-      "doi": "",
-      "keywords": [
-        "MA AND ISAC"
-      ],
-      "concepts": [
-        "ISAC",
-        "MA"
       ]
     },
     {
