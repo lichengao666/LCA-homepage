@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T21:39:40.442839+00:00",
+  "generated_at": "2026-07-01T21:39:31.658494+00:00",
   "status": "ok",
   "message": "Paper radar data generated successfully.",
   "source": "Google Scholar",
@@ -110,6 +110,36 @@
       ],
       "concepts": [
         "ISAC",
+        "UAV"
+      ]
+    },
+    {
+      "title": "Predictive position control for movable antenna arrays in UAV communications: A spatio-temporal transformer-LSTM framework",
+      "authors": [
+        "K Yu",
+        "K Li",
+        "X Liu",
+        "Q Zhang",
+        "Z Feng"
+      ],
+      "journal": "arXiv",
+      "quartile": "Preprint",
+      "sci_quartile": "Preprint",
+      "cas_zone": null,
+      "cas_note": null,
+      "rank_note": "Preprint",
+      "venue_type": "preprint",
+      "published": "2025-01-01",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2508.10720",
+      "google_scholar_id": "F_z_zH_GW6YJ",
+      "cited_by": 6,
+      "doi": "",
+      "keywords": [
+        "MA AND UAV"
+      ],
+      "concepts": [
+        "MA",
         "UAV"
       ]
     },
